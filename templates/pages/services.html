@@ -1,0 +1,141 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<!--discount-offer start-->
+<section class="discount-offer">
+  <div class="container">
+      
+      <div class="row text-center" style="color:white;">
+              <h2 style="color:white;">
+                Bangalore and Outstation drop taxi Routes
+              </h2>
+          <br>
+                 
+      </div><!-- /.row-->
+      <h4 style="color:white;">
+        Plan your outstation journey anywhere across India with choice of cars from economy hatchbacks to sedan, from premium sedans to SUVs. Go places with Sim Drop Taxi. Book Today.
+      </h4>
+  </div><!-- /.container-->
+
+</section><!-- /.discount-offer-->
+<!--discount-offer end-->
+
+
+
+
+
+
+
+<!--packages start-->
+<section id="pack" class="packages">
+  
+  <div class="container">
+    
+      <div class="packages-content">
+
+        <div class="row">
+
+          <div class="col d-inline p-2 bg-info text-dark">
+              <br>
+              <h4 class="col text-center d-inline p-2 bg-info text-dark">Services at Bangalore</h4>
+              <br>
+              {% for i in bangalore %}
+          <div class="single-tab-select-box">
+              <form method="post" action="{{ url_for('quickbook') }}">
+                <div class="row">
+                  <div class="col-lg-10 col-md-8 col-sm-10">
+                    <h5>select a Service at {{ i }}</h5>
+                    <div class="travel-select-icon">
+                      
+                      <select class="form-control " name="destination" required>
+                        
+                        {% for j in bangalore %}
+                          {% if j != i %}
+                            <option>from {{ i }} to {{ j }}</option>
+                          {% endif %}
+                        {% endfor %}
+                      </select><!-- /.select-->
+                    </div><!-- /.travel-select-icon --> 
+                  </div><!--/.col-->
+                  <div class="col-lg-2 col-md-4 col-sm-2">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Book now</button>
+                  </div><!--/.col-->
+                </div><!--/.row-->  
+              </form>
+          </div><!--/.single-tab-select-box-->
+          {% endfor %}
+        </div>
+      </div><!--/.row-->
+
+      <hr>
+
+
+
+      <div class="row">
+
+          <div class="col d-inline p-2 bg-info text-dark">
+              <br>
+              <h4 class="col text-center d-inline p-2 bg-info text-dark">Services at Tamilnadu</h4>
+              <br>
+              {% for i in tamilnadu %}
+          <div class="single-tab-select-box">
+              <form method="post" action="{{ url_for('quickbook') }}">
+                <div class="row">
+                  <div class="col-lg-10 col-md-8 col-sm-10">
+                    <h5>select a Service at {{ i }}</h5>
+                    <div class="travel-select-icon">
+                      
+                      <select class="form-control " name="destination" required>
+                        
+                        {% for j in tamilnadu %}
+                          {% if j != i %}
+                            <option>from {{ i }} to {{ j }}</option>
+                          {% endif %}
+                        {% endfor %}
+                      </select><!-- /.select-->
+                    </div><!-- /.travel-select-icon --> 
+                  </div><!--/.col-->
+                  <div class="col-lg-2 col-md-4 col-sm-2">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Book now</button>
+                  </div><!--/.col-->
+                </div><!--/.row-->  
+              </form>
+          </div><!--/.single-tab-select-box-->
+          {% endfor %}
+        </div>
+      </div><!--/.row-->
+
+   
+      
+          
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+          
+      </div><!--/.packages-content-->
+  </div><!--/.container-->
+</section><!--/.packages-->
+
+
+
+
+
+{% endblock content %}

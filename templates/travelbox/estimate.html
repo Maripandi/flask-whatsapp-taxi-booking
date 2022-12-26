@@ -1,0 +1,148 @@
+
+
+<div role="tabpanel" class="tab-pane fade in" id="flights">
+    <div class="tab-para">
+
+    <form method="post" action="{{ url_for('estimate') }}">
+        
+        <div class="trip-circle form-check">
+            <div class="single-trip-circle">
+                <input type="radio" id="radio01" name="radio" value="OneWay Trip" checked/>
+                  <label for="radio01">
+                      <span class="round-boarder">
+                          <span class="round-boarder1"></span>
+                      </span>One way 
+                  </label>
+            </div><!--/.single-trip-circle-->
+            <div class="single-trip-circle">
+                <input type="radio" id="radio02" name="radio" value="Round Trip"/>
+                  <label for="radio02">
+                      <span class="round-boarder">
+                          <span class="round-boarder1"></span>
+                      </span>Round Trip
+                  </label>
+            </div><!--/.single-trip-circle-->
+        </div><!--/.trip-circle-->
+
+        <div class="row">
+            
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="single-tab-select-box">
+                    <h2>Name</h2>
+                    <div class="travel">
+                        
+                        <input type="text" 
+                                class="form-control form-control-lg" 
+                                style="border-radius: 0;" 
+                                name="name" required id="name" aria-describedby="" 
+                                placeholder="Your Name eg:John">
+                        
+                    </div><!-- /.travel-check-icon -->
+                </div><!--/.single-tab-select-box-->
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+                <div class="single-tab-select-box">
+                    <h2>Phone Number</h2>
+                    <div class="travel">
+    
+                        <input type="text" class="form-control" 
+                                style="border-radius: 0;" 
+                                name="phnumber" required id="" aria-describedby="" 
+                                placeholder="Your phone number eg:98765***10">
+                        
+                    </div><!-- /.travel-check-icon -->
+                </div><!--/.single-tab-select-box-->
+            </div>
+            
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="single-tab-select-box">
+
+                    <h2>destination</h2>
+
+                    <div class="travel">
+                        <input type="text" class="form-control" style="border-radius: 0;" 
+                                name="startlocation" required id="" aria-describedby="" placeholder="enter your Start location">
+
+                    </div><!-- /.travel-select-icon -->
+                    <br>
+                    <div class="travel">
+                        <input type="text" class="form-control" style="border-radius: 0;" 
+                                name="endlocation" required id="" aria-describedby="" placeholder="enter your Destination location">
+
+                    </div><!-- /.travel-select-icon -->
+
+                </div><!--/.single-tab-select-box-->
+            </div><!--/.col-->
+            
+
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="single-tab-select-box">
+                    <h2>check in</h2>
+                    <div class="travel-check-icon">
+                        
+                            <input type="text" name="check_in" required class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
+                        
+                    </div><!-- /.travel-check-icon -->
+                </div><!--/.single-tab-select-box-->
+            </div><!--/.col-->
+
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="single-tab-select-box">
+                    <h2>check out</h2>
+                    <div class="travel-check-icon">
+
+                            <input type="text" name="check_out" required class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+                        
+                    </div><!-- /.travel-check-icon -->
+                </div><!--/.single-tab-select-box-->
+            </div><!--/.col-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="single-tab-select-box">
+                    <h2>Car</h2>
+                    <div class="travel-select-icon">
+                        <select class="form-control " name="car" required>
+
+                            <option selected disabled>Select car</option>
+                            <option>SUV</option>
+                            <option>SEDAN</option>
+                            <option>ETIOS</option>
+                            <option>INNOVA</option>  
+
+                        </select><!-- /.select-->
+                    </div><!-- /.travel-select-icon -->
+                </div><!--/.single-tab-select-box-->
+            </div><!--/.col-->
+            
+
+            
+
+        </div><!--/.row-->
+
+     
+
+        <div class="row">
+            
+           
+            <div class="clo-sm-5">
+                <div class="about-btn pull-right">
+                    <button  class="about-view travel-btn">
+                        Calculate	
+                    </button><!--/.travel-btn-->
+                </div><!--/.about-btn-->
+            </div><!--/.col-->
+            
+        </div><!--/.row-->
+    </form>
+
+    
+    
+
+    </div>
+
+</div><!--/.tabpannel-->

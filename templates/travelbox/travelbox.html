@@ -1,0 +1,45 @@
+<!--travel-box start-->
+<section  class="travel-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="single-travel-boxes">
+                    <div id="desc-tabs" class="desc-tabs">
+
+                        <ul class="nav nav-tabs" role="tablist">
+
+                            
+
+                            <li role="presentation" class="active">
+                                <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
+                                    <i class="fa fa-whatsapp"></i>
+                                    Book now
+                                </a>
+                            </li>
+
+                            <li role="presentation">
+                                 <a href="#flights" aria-controls="flights"  role="tab" data-toggle="tab">
+                                    <i class="fa fa-calculator"></i>
+                                     Estimation
+                                 </a>
+                            </li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+                            {% include 'travelbox/bookonwhapp.html' %}
+                            {% include 'travelbox/estimate.html' %}
+
+                        </div><!--/.tab content-->
+
+
+                    </div><!--/.desc-tabs-->
+                </div><!--/.single-travel-box-->
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+
+</section><!--/.travel-box-->
+<!--travel-box end-->

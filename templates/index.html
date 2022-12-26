@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+
+
+
+
+		
+		<!--about-us start -->
+		<section id="home" class="about-us">
+			<div class="container">
+				<div class="about-us-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="single-about-us">
+								<div class="about-us-txt">
+									<h2>
+										Explore the Beauty of the Beautiful World with Yuvaraj tours and travels
+
+									</h2>
+									<div class="about-btn pull-right">
+										
+										<a name="" id="" class=" book-btn about-view" href="{{ url_for('services') }}" role="button">Quick Book</a>
+									</div><!--/.about-btn-->
+								</div><!--/.about-us-txt-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+						<div class="col-sm-0">
+							<div class="single-about-us">
+								
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.about-us-content-->
+			</div><!--/.container-->
+
+		</section><!--/.about-us-->
+		<!--about-us end -->
+
+
+		<section>
+		
+		
+			<a href="tel:+916361542457" class="float" style="left:40px; background-color:DodgerBlue;" target="_blank">
+			<i class="fa fa-phone my-float"></i>
+			</a>
+	
+			<a href="https://api.whatsapp.com/send?phone=+916361542457&text=Hey I Want a ride! Contact me soon." class="float" style="right:40px; background-color:#25d366;" target="_blank">
+				<i class="fa fa-whatsapp my-float"></i>
+				</a>
+			
+			
+			</section>
+
+
+
+
+
+		{% include 'travelbox/travelbox.html' %}
+
+        {% include 'services.html' %}
+
+		{% include 'gallary.html' %}
+
+
+		{% include 'discountpackages.html' %}
+
+
+		{% include 'testemonial.html' %}
+
+
+		{% include 'specialoffers.html' %}
+
+		{% include 'blogsubscription.html' %}
+
+
+		{% include 'footer.html' %}
+
+
+		
+
+
+{% endblock content %}

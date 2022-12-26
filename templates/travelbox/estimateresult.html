@@ -1,0 +1,121 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<!--discount-offer start-->
+<section class="discount-offer">
+  <div class="container">
+      
+      <div class="row text-center" style="color:white;">
+              <h2 style="color:white;">
+                Here is your estimation
+              </h2>
+          <br>
+                 
+      </div><!-- /.row-->
+      <div class="table-responsive" style="color:white;">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Your Data</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td scope="row">Name</td>
+                    <td>{{ name }}</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">Phone</td>
+                    <td>{{ phone }}</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">From</td>
+                    <td>{{ pickup }}</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">To</td>
+                    <td>{{ drop }}</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">Route Type</td>
+                    <td>{{ type }}</td>
+                    
+                </tr>
+                
+                <tr class="">
+                    <td scope="row">Car</td>
+                    <td>{{ cartype }} (₹  {{ km }}.00/ KM for {{ type }})</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">distance</td>
+                    <td>{{ distance }} km</td>
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">Price</td>
+                    <td><h3 class="display-3" style="color:white;">₹ {{ price }}.00/-</h3>*Aproxmately</td>
+                        
+                    
+                </tr>
+                <tr class="">
+                    <td scope="row">
+                        <a name="" id="" class=" book-btn about-view"
+                         href="https://api.whatsapp.com/send?phone=+916361542457&text=Hey
+                          I Want a ride! from {{ pickup }} to {{ drop }} Contact me soon." 
+                         role="button">Confirm</a>
+                    </td>
+                    <td>
+                        <a name="" id="" class=" book-btn about-view" href="{{ url_for('home') }}" role="button"><i class="fa fa-home"></i> Home</a>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+      
+  </div><!-- /.container-->
+
+</section><!-- /.discount-offer-->
+<!--discount-offer end-->
+
+<!--packages start-->
+<section id="pack" class="packages">
+    <div class="container">
+        <div class="packages-content">
+
+            
+            <div class="row">
+
+                <div class="col d-inline p-2 bg-info text-dark">
+                    <br>
+                    <h4 class="col text-center d-inline p-2 bg-info text-dark">Rates Given Above</h4>
+                    <br>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Toll fees,Inter-State Permit charges (if any) are extra.</li>
+                        <li class="list-group-item"> Drop Trips-Minimum running must be 130kms per day.</li>
+                        <li class="list-group-item"> Round Trips-Minimum running must be 250kms per day.For Bengaluru it is minimum 300kms per day.</li>
+                        <li class="list-group-item">Hill station charges - Rs.300</li>
+                        <li class="list-group-item">1 day means 1 calender day (from midnight 12 to Next Midnight 12)</li>
+                        <li class="list-group-item"> Waiting charge : Sedan Rs. 120 Suv Rs. 150</li>
+                    </ul>
+                </div>
+        
+            </div><!--/.row-->
+        </div><!--/.packages-content-->
+    </div><!--/.container-->
+</section><!--/.packages-->
+<!--packages end-->
+
+
+
+
+{% endblock content %}
